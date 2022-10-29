@@ -1,3 +1,5 @@
+@import "./variables";
+
 .taskList {
     overflow-y: auto;
     display: flex;
@@ -7,33 +9,33 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #d9d9d9;
+        border-bottom: 1px solid $grey;
         h3.completed {
             text-decoration: line-through;
         }
         h3 {
             font-size: .9rem;
-            color: #F4D06F;
+            color: $yellow;
             cursor: pointer;
             transition: color .2s ease-in-out;
             &:hover {
-                color: hsl(44, 86%, 80%);
+                color: $yallow-hover;
             }
         }
         p {
             font-size:.7rem;
-            color: #d9d9d9;
+            color: $grey;
         }
         p.completed {
             text-decoration: line-through;
         }
         .delete {
-            color:#F05454;
+            color:$red;
             cursor: pointer;
             font-size: 1.2rem;
             transition: color .2s ease-in-out;
             &:hover {
-                color: hsl(0, 84%, 70%);
+                color: $light-red;
             }
         }
     }

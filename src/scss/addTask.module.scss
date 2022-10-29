@@ -1,4 +1,4 @@
-@import "./mixins";
+@import "./mixins", "./variables";
 
 .addTaskSection {
     display: flex;
@@ -8,14 +8,14 @@
         width: 100%;
         padding: .9rem 1rem;
         border-radius: .5rem;
-        background-color: #D9D9D9;
+        background-color: $grey;
         border: none;
         outline: none;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         color: hsl(0, 0%, 55%);
     }
     .btn {
-        @include buttons(#F05454, hsl(0, 84%, 70%));
+        @include buttons($red, $light-red);
     }
 
 }
