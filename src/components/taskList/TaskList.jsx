@@ -10,7 +10,7 @@ export default function TaskList({ tasks, url, getTask }) {
 
         const deleteTask = async (id) => {
           try {
-            await axios.post(`${url}/${id}`);
+            await axios.delete(`${url}/${id}`);
           } catch (e) {
             console.log(e);
           }
@@ -26,13 +26,20 @@ export default function TaskList({ tasks, url, getTask }) {
         };
 
         return (
-          <div key={id}>
-            <h3 onClick={() => changeStatus(id)}>
-              {task} {completed ? "Completed" : "Prgressing"}
-            </h3>
-            <p>{date}</p>
-            <MdDelete onClick={() => deleteTask(id)} />
-            <hr />
+          <div className={TaskListStyle.task} key={id}>
+            <div>
+              <h3
+                onClick={() => changeStatus(id)}
+                className={completed && TaskListStyle.completed}
+              >
+                {task}
+              </h3>
+              <p className={completed && TaskListStyle.completed}>{date}</p>
+            </div>
+            <MdDelete
+              className={TaskListStyle.delete}
+              onClick={() => deleteTask(id)}
+            />
           </div>
         );
       })}

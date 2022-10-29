@@ -4,6 +4,23 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #D9D9D9; 
+    border-radius: 2rem;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #4B88A2;
+    border-radius: 2rem; 
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5092af; 
+  }
 
 .container {
     background-color: #252627;

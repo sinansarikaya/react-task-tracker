@@ -11,6 +11,7 @@
         border: none;
         outline: none;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        color: hsl(0, 0%, 55%);
     }
     .btn {
         @include buttons(#F05454, hsl(0, 84%, 70%));
