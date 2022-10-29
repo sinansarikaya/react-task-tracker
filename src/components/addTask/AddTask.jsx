@@ -31,12 +31,14 @@ function AddTask({ url, getTask, showAlert }) {
         onChange={(e) => setAddNewTask(e.target.value)}
         placeholder="Task"
         value={addNewTask}
+        required
       />
       <input
         type="date"
         className={AddTaskStyle.input}
         onChange={(e) => setDate(e.target.value)}
         value={date}
+        required
       />
       <input type="submit" className={AddTaskStyle.btn} value="Save" />
     </form>
