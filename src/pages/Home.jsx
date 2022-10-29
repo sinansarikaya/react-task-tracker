@@ -26,18 +26,33 @@ function Home() {
     getTask();
   }, []);
 
+  const showAlert = (alertType, message) => {
+    console.log(alertType, message);
+    setAlert({
+      type: alertType,
+      title: message,
+      status: true,
+    });
+    const interval = setInterval(() => {
+      setAlert({ type: "", title: "", status: false });
+    }, 3000);
+    return () => clearInterval(interval);
+  };
+
   return (
     <div className="container">
       <Logo />
       <Alert alert={alert} />
       <div className="task-container">
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
-        {isOpen && <AddTask url={url} getTask={getTask} setAlert={setAlert} />}
+        {isOpen && (
+          <AddTask url={url} getTask={getTask} showAlert={showAlert} />
+        )}
         <TaskList
           url={url}
           tasks={tasks}
           getTask={getTask}
-          setAlert={setAlert}
+          showAlert={showAlert}
         />
       </div>
       <Footer />

@@ -2,7 +2,7 @@ import { MdDelete } from "react-icons/md";
 import axios from "axios";
 import TaskListStyle from "../../scss/taskList.module.scss";
 
-export default function TaskList({ tasks, url, getTask, setAlert }) {
+export default function TaskList({ tasks, url, getTask, showAlert }) {
   return (
     <div className={TaskListStyle.taskList}>
       {tasks.map((item) => {
@@ -15,14 +15,15 @@ export default function TaskList({ tasks, url, getTask, setAlert }) {
             console.log(e);
           }
           getTask();
+          showAlert("danger", "Task deleted successfully!");
         };
 
         const changeStatus = async (id) => {
-          console.log(`${url}/${id}`);
           try {
             await axios.put(`${url}/${id}`, { completed: !completed });
           } catch (e) {}
           getTask();
+          showAlert("warning", "Task status has been updated!");
         };
 
         return (
