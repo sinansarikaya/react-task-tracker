@@ -38,6 +38,7 @@ function AddTask({ url, getTask, showAlert }) {
         className={AddTaskStyle.input}
         onChange={(e) => setDate(e.target.value)}
         value={date}
+        placeholder="Date"
         required
       />
       <input type="submit" className={AddTaskStyle.btn} value="Save" />
