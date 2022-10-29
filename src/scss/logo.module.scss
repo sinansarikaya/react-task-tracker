@@ -1,6 +1,8 @@
+@import "./variables";
+
 .logo {
     height: 19vh;
-    background-color: #D9D9D9;
+    background-color: $grey;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;

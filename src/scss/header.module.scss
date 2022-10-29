@@ -1,13 +1,13 @@
-@import "./mixins";
+@import "./mixins", "./variables";
 
 header {
     .title {
-        color: #D3D4D9;
+        color: $grey;
         text-align: center;
         margin-bottom: 1rem; 
         font-size: 1.5rem;
     }
     button {
-        @include buttons(#4B88A2, #5092af);
+        @include buttons($blue, $blue-hover);
     }
 }

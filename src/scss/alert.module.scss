@@ -1,3 +1,5 @@
+@import "./variables";
+
 .alertContainer{
     margin-top: auto;
     min-width: 49%;
@@ -12,20 +14,20 @@
         align-items: center;
         position: absolute;
         left: 0;
-        color: #d9d9d9;
+        color: $grey;
         font-weight: bold;
         transition: all .3s ease-in-out;
         &.warning{
-            background-color: #F4D06F;
-            color: hsl(210, 2%, 30%);
+            background-color: $yellow;
+            color: $light-dark;
         }
         &.danger{
-            background-color: #f05454;
-            color: #d9d9d9;
+            background-color: $red;
+            color: $grey;
         }
         &.success{
-            background-color: #5cb85c;
-            color: #d9d9d9;
+            background-color: $green;
+            color: $grey;
         } 
         &.active {
             bottom: 0;
@@ -33,5 +35,11 @@
         &.passive {
             bottom: -100%;
         }
+    }
+  
+}
+@media (max-width: 620px) {
+    .alertContainer {
+      min-width: 88%;
     }
 }

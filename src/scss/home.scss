@@ -9,12 +9,12 @@ body {
   }
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #D9D9D9; 
+    background: $grey; 
     border-radius: 2rem;
   }
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #4B88A2;
+    background: $blue;
     border-radius: 2rem; 
   }
   /* Handle on hover */
@@ -23,7 +23,7 @@ body {
   }
 
 .container {
-    background-color: #252627;
+    background-color: $dark;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -36,9 +36,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: hsl(210, 2%, 30%);
+    background-color: $light-dark;
     padding: 2rem;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     margin-bottom: auto;
+}
+@media (max-width: 620px) {
+  .task-container {
+    min-width: 90%;
+  }
 }
