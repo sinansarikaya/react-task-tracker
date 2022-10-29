@@ -2,7 +2,7 @@ import { MdDelete } from "react-icons/md";
 import axios from "axios";
 import TaskListStyle from "../../scss/taskList.module.scss";
 
-export default function TaskList({ tasks, url, getTask }) {
+export default function TaskList({ tasks, url, getTask, setAlert }) {
   return (
     <div className={TaskListStyle.taskList}>
       {tasks.map((item) => {
@@ -30,11 +30,11 @@ export default function TaskList({ tasks, url, getTask }) {
             <div>
               <h3
                 onClick={() => changeStatus(id)}
-                className={completed && TaskListStyle.completed}
+                className={completed ? TaskListStyle.completed : ""}
               >
                 {task}
               </h3>
-              <p className={completed && TaskListStyle.completed}>{date}</p>
+              <p className={completed ? TaskListStyle.completed : ""}>{date}</p>
             </div>
             <MdDelete
               className={TaskListStyle.delete}
