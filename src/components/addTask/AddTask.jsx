@@ -1,9 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import AddTaskStyle from "../../scss/addTask.module.scss";
-import AlertStyle from "../../scss/alert.module.scss";
 
-function AddTask({ url, getTask, setAlert }) {
+function AddTask({ url, getTask, showAlert }) {
   const [addNewTask, setAddNewTask] = useState("");
   const [date, setDate] = useState("");
 
@@ -20,14 +19,10 @@ function AddTask({ url, getTask, setAlert }) {
       await axios.post(url, newTask);
     } catch (e) {}
     getTask();
-    setAlert({ type: "success", title: "Successfull!", status: true });
 
-    const interval = setInterval(() => {
-      setAlert({ type: "", title: "", status: false });
-    }, 3000);
-    return () => clearInterval(interval);
+    showAlert("success", "Task addedsuccessfully!");
   };
-  console.log(AlertStyle.alert);
+
   return (
     <form className={AddTaskStyle.addTaskSection} onSubmit={handleSubmit}>
       <input
