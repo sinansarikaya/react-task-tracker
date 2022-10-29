@@ -1,0 +1,19 @@
+@import "./mixins";
+
+.addTaskSection {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    .input {
+        padding: .9rem 1rem;
+        border-radius: .5rem;
+        background-color: #D9D9D9;
+        border: none;
+        outline: none;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .btn {
+        @include buttons(#F05454, hsl(0, 84%, 70%));
+    }
+
+}

@@ -1,0 +1,17 @@
+@mixin buttons($bg-color, $hover-bg-color) {
+    width: 100%;
+    padding: .9rem 1rem;
+    border-radius: .5rem;
+    background-color: $bg-color;
+    color: #D9D9D9;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    &:hover {
+        background-color: $hover-bg-color;
+    }
+  }

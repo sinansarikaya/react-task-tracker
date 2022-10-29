@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import AddTaskStyle from "../../scss/addTask.module.scss";
 
 function AddTask({ url, getTask }) {
   const [addNewTask, setAddNewTask] = useState("");
@@ -21,17 +22,20 @@ function AddTask({ url, getTask }) {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          onChange={(e) => setAddNewTask(e.target.value)}
-          placeholder="Task"
-        />
-        <input type="date" onChange={(e) => setDate(e.target.value)} />
-        <input type="submit" value="Save" />
-      </form>
-    </div>
+    <form className={AddTaskStyle.addTaskSection} onSubmit={handleSubmit}>
+      <input
+        type="text"
+        className={AddTaskStyle.input}
+        onChange={(e) => setAddNewTask(e.target.value)}
+        placeholder="Task"
+      />
+      <input
+        type="date"
+        className={AddTaskStyle.input}
+        onChange={(e) => setDate(e.target.value)}
+      />
+      <input type="submit" className={AddTaskStyle.btn} value="Save" />
+    </form>
   );
 }
 

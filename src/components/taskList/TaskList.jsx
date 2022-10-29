@@ -1,9 +1,10 @@
 import { MdDelete } from "react-icons/md";
 import axios from "axios";
+import TaskListStyle from "../../scss/taskList.module.scss";
 
 export default function TaskList({ tasks, url, getTask }) {
   return (
-    <div>
+    <div className={TaskListStyle.taskList}>
       {tasks.map((item) => {
         const { id, task, date, completed } = item;
 

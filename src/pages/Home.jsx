@@ -7,7 +7,7 @@ import Footer from "../components/footer/Footer";
 import Logo from "../components/logo/Logo";
 
 function Home() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [tasks, setTasks] = useState([]);
   const url = "https://63518403dfe45bbd55c252f3.mockapi.io/api/tasks";
 
