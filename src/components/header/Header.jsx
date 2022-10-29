@@ -1,11 +1,13 @@
+import HeaderStyle from "../../scss/header.module.scss";
+
 function Header({ isOpen, setIsOpen }) {
   return (
-    <div>
-      <h1>Task Tracker</h1>
+    <header>
+      <h1 className={HeaderStyle.title}>Task Tracker</h1>
       <button onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? "Hide" : "Show"} Task Bar
       </button>
-    </div>
+    </header>
   );
 }
 
