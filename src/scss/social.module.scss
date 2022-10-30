@@ -1,0 +1,22 @@
+@import "./variables";
+.social {
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    background-color: $blue;
+    position: absolute;
+    right: 0;
+    top: 1.5rem;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    padding: 1rem;
+    .icon {
+        font-size: 1.5rem;
+        color: $grey;
+        cursor: pointer;
+        transition: color .2s ease-in-out;
+        &:hover {
+            color:$dark;
+        }
+    }
+}
