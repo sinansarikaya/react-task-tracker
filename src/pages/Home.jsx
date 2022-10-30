@@ -6,6 +6,7 @@ import TaskList from "../components/taskList/TaskList";
 import Footer from "../components/footer/Footer";
 import Logo from "../components/logo/Logo";
 import Alert from "../components/alert/Alert";
+import Social from "../components/social/Social";
 
 function Home() {
   const [isOpen, setIsOpen] = useState(true);
@@ -41,6 +42,7 @@ function Home() {
 
   return (
     <div className="container">
+      <Social />
       <Logo />
       <Alert alert={alert} />
       <div className="task-container">
