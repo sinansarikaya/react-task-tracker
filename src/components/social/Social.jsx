@@ -11,7 +11,7 @@ const Social = () => {
         <GrLinkedinOption className={SocialStyle.icon} />
       </a>
       <a
-        href="https://sinansarikaya.github.io/react-task-tracker/"
+        href="https://github.com/sinansarikaya/react-task-tracker"
         target="_blank"
       >
         <GrGithub className={SocialStyle.icon} />
